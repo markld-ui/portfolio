@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Проекты — Роман Слиньков</title>
+<meta name="description" content="Проекты Романа Слинькова: backend-системы на ASP.NET Core.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand" data-nav>
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 17 L12 4 L20 17" stroke="#4E86FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-text">
+        Роман Слиньков
+        <span class="brand-sub">.NET Backend Dev</span>
+      </span>
+    </a>
+
+    <nav id="navLinks" class="nav-links">
+      <a href="index.html" data-nav data-ru="Главная" data-en="Home">Главная</a>
+      <a href="experience.html" data-nav data-ru="Опыт" data-en="Experience">Опыт</a>
+      <a href="projects.html" data-nav data-ru="Проекты" data-en="Projects" class="active">Проекты</a>
+      <a href="contacts.html" data-nav data-ru="Контакты" data-en="Contacts">Контакты</a>
+    </nav>
+
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+      <a class="nav-cta" href="mailto:thankr3@gmail.com" data-ru="Написать" data-en="Say hi">Написать</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow" data-ru="ПРОЕКТЫ" data-en="PROJECTS">ПРОЕКТЫ</div>
+      <h1 data-ru="Backend-системы, которые я собирал" data-en="Backend systems I've built">Backend-системы, которые я собирал</h1>
+      <p data-ru="Два кейса из практики — от ролевой модели доступа до автоматизации жизненного цикла проектов. Больше кода — на GitHub." data-en="Two case studies from my internships — from role-based access to project-lifecycle automation. More code on GitHub.">Два кейса из практики — от ролевой модели доступа до автоматизации жизненного цикла проектов. Больше кода — на GitHub.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="container">
+      <div class="grid-2">
+
+        <div class="project-card">
+          <div class="proj-badge" data-ru="PROJECT MANAGEMENT SYSTEM" data-en="PROJECT MANAGEMENT SYSTEM">PROJECT MANAGEMENT SYSTEM</div>
+          <h3 data-ru="Система автоматизации управления проектами" data-en="Project management automation system">Система автоматизации управления проектами</h3>
+          <p class="desc" data-ru="REST API на 30+ эндпоинтов с ролевой моделью на 6 ролей, JWT-авторизацией и FSM для контроля жизненного цикла проектов. Clean Architecture + CQRS на MediatR, контейнеризация через Docker." data-en="A REST API with 30+ endpoints, role-based access across 6 roles, JWT authorization and an FSM controlling project lifecycle. Clean Architecture + CQRS with MediatR, containerized with Docker.">REST API на 30+ эндпоинтов с ролевой моделью на 6 ролей, JWT-авторизацией и FSM для контроля жизненного цикла проектов. Clean Architecture + CQRS на MediatR, контейнеризация через Docker.</p>
+          <div class="tag-row">
+            <span class="tag">ASP.NET Core</span><span class="tag">Clean Architecture</span><span class="tag">CQRS</span><span class="tag">MediatR</span><span class="tag">JWT</span><span class="tag">Docker</span>
+          </div>
+          <a class="project-link" href="https://github.com/markld-ui" target="_blank" rel="noopener">
+            <span data-ru="Код на GitHub" data-en="Code on GitHub">Код на GitHub</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-badge" data-ru="EVENT PLATFORM API" data-en="EVENT PLATFORM API">EVENT PLATFORM API</div>
+          <h3 data-ru="API платформы управления мероприятиями" data-en="Event-management platform API">API платформы управления мероприятиями</h3>
+          <p class="desc" data-ru="RESTful API для регистрации пользователей, управления мероприятиями и новостного блога. CRUD, загрузка изображений, RBAC, JWT-аутентификация, EF Core + SQL Server, документация в Swagger." data-en="RESTful API for user registration, event management and a news blog. CRUD, image uploads, RBAC, JWT authentication, EF Core + SQL Server, Swagger docs.">RESTful API для регистрации пользователей, управления мероприятиями и новостного блога. CRUD, загрузка изображений, RBAC, JWT-аутентификация, EF Core + SQL Server, документация в Swagger.</p>
+          <div class="tag-row">
+            <span class="tag">ASP.NET Core</span><span class="tag">Entity Framework Core</span><span class="tag">SQL Server</span><span class="tag">RBAC</span><span class="tag">Swagger</span>
+          </div>
+          <a class="project-link" href="https://github.com/markld-ui" target="_blank" rel="noopener">
+            <span data-ru="Код на GitHub" data-en="Code on GitHub">Код на GitHub</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="container">
+      <div class="project-card gh-card" style="flex-direction:row; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+        <div>
+          <div class="proj-badge" data-ru="ЕЩЁ РЕПОЗИТОРИИ" data-en="MORE REPOSITORIES">ЕЩЁ РЕПОЗИТОРИИ</div>
+          <h3 style="margin-bottom:6px;" data-ru="github.com/markld-ui" data-en="github.com/markld-ui">github.com/markld-ui</h3>
+          <p class="desc" style="margin-bottom:0;" data-ru="Учебные и пет-проекты, эксперименты со стеком, история коммитов." data-en="Learning and side projects, stack experiments, commit history.">Учебные и пет-проекты, эксперименты со стеком, история коммитов.</p>
+        </div>
+        <a class="btn btn-primary" href="https://github.com/markld-ui" target="_blank" rel="noopener">
+          <span data-ru="Открыть GitHub" data-en="Open GitHub">Открыть GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Roman Slinkov</p>
+    <div class="footer-links">
+      <a href="mailto:thankr3@gmail.com">Email</a>
+      <a href="https://t.me/m_a_r_k_l_d" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://github.com/markld-ui" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
