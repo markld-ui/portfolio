@@ -4,11 +4,10 @@ RUN addgroup -g 1000 -S appgroup && \
     adduser -u 1000 -S appuser -G appgroup
 
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --chown=appuser:appgroup site/ /usr/share/nginx/html
+COPY --chown=appuser:appgroup . /usr/share/nginx/html
 
 RUN mkdir -p /var/cache/nginx /var/run && \
-    chown -R appuser:appgroup /var/cache/nginx /var/run && \
-    rm -f /etc/nginx/conf.d/default.conf.bak
+    chown -R appuser:appgroup /var/cache/nginx /var/run
 
 USER appuser
 
