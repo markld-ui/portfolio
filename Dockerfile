@@ -7,11 +7,11 @@ COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --chown=appuser:appgroup *.html /usr/share/nginx/html/
 COPY --chown=appuser:appgroup assets/ /usr/share/nginx/html/assets/
 
-RUN mkdir -p /var/cache/nginx /var/run && \
-    chown -R appuser:appgroup /var/cache/nginx /var/run
+RUN mkdir -p /var/cache/nginx /tmp/nginx && \
+    chown -R appuser:appgroup /var/cache/nginx /tmp/nginx
 
 USER appuser
 
 EXPOSE 8080 8443
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off; pid /tmp/nginx.pid;"]
