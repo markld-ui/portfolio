@@ -1,6 +1,5 @@
 Dockerfile
 docker-compose.yml
-nginx
 certs
 .git
 .gitignore
