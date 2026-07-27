@@ -6,8 +6,8 @@ services:
     container_name: portfolio
     restart: unless-stopped
     ports:
-      - "80:8080"
-      - "443:8443"
+      - "80:80"
+      - "443:443"
     volumes:
       - ./certs/fullchain.pem:/etc/nginx/ssl/fullchain.pem:ro
       - ./certs/privkey.pem:/etc/nginx/ssl/privkey.pem:ro
