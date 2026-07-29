@@ -1,182 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Роман Слиньков — .NET Backend Developer</title>
-<meta name="description" content="Роман Слиньков — .NET Backend Developer. ASP.NET Core, Clean Architecture, CQRS, REST API.">
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="brand" data-nav>
-      <span class="brand-mark">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M4 17 L12 4 L20 17" stroke="#4E86FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <span class="brand-text">
-        Роман Слиньков
-        <span class="brand-sub">.NET Backend Dev</span>
-      </span>
-    </a>
-
-    <nav id="navLinks" class="nav-links">
-      <a href="index.html" data-nav data-ru="Главная" data-en="Home">Главная</a>
-      <a href="experience.html" data-nav data-ru="Опыт" data-en="Experience">Опыт</a>
-      <a href="projects.html" data-nav data-ru="Проекты" data-en="Projects">Проекты</a>
-      <a href="contacts.html" data-nav data-ru="Контакты" data-en="Contacts">Контакты</a>
-    </nav>
-
-    <div class="nav-right">
-      <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
-      <a class="nav-cta" href="mailto:thankr3@gmail.com" data-ru="Написать" data-en="Say hi">Написать</a>
-      <button class="nav-burger" id="navBurger" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow hero-kicker" data-ru="JUNIOR .NET DEVELOPER · ТОМСК" data-en="JUNIOR .NET DEVELOPER · TOMSK, RUSSIA">JUNIOR .NET DEVELOPER · ТОМСК</div>
-        <h1>
-          <span data-ru="Пишу backend, который" data-en="I write backends that">Пишу backend, который</span><br>
-          <span class="accent" data-ru="легко масштабировать" data-en="are easy to scale.">легко масштабировать.</span>
-        </h1>
-        <p class="lead" data-ru="Junior .NET-разработчик из Томска. За плечами — не корпоративный стаж, а два проекта, где бизнес-логика живёт в домене: FSM вместо хаоса состояний, Clean Architecture вместо одного большого Controller.cs. Ищу команду, где можно расти дальше." data-en="Junior .NET developer from Tomsk. Instead of years at a big company, I have two projects where the business logic actually lives in the domain: an FSM instead of state chaos, Clean Architecture instead of one giant Controller.cs. Looking for a team to grow with.">Junior .NET-разработчик из Томска. За плечами — не корпоративный стаж, а два проекта, где бизнес-логика живёт в домене: FSM вместо хаоса состояний, Clean Architecture вместо одного большого Controller.cs. Ищу команду, где можно расти дальше.</p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:thankr3@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span data-ru="Связаться со мной" data-en="Get in touch">Связаться со мной</span>
-          </a>
-          <a class="btn btn-ghost" href="https://github.com/markld-ui" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.34c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-            <span data-ru="Смотреть код" data-en="View code">Смотреть код</span>
-          </a>
-        </div>
-
-        <div class="hero-stats">
-          <div>
-            <div class="stat-num">30+</div>
-            <div class="stat-label" data-ru="API endpoints" data-en="API endpoints">API endpoints</div>
-          </div>
-          <div>
-            <div class="stat-num">6</div>
-            <div class="stat-label" data-ru="ролей доступа" data-en="access roles">access roles</div>
-          </div>
-          <div>
-            <div class="stat-num">6</div>
-            <div class="stat-label" data-ru="Состояний FSM" data-en="FSM States">FSM States</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-portrait">
-        <div class="orbit-ring"></div>
-        <div class="portrait-frame">
-          <img src="assets/roman.jpg" alt="Роман Слиньков">
-        </div>
-        <div class="status-pill">
-          <span class="dot"></span>
-          <span data-ru="Готов к удалённой работе" data-en="Open to remote work">Готов к удалённой работе</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider container">
-
-  <section class="reveal">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow" data-ru="СТЕК" data-en="STACK">СТЕК</div>
-        <h2 data-ru="Технологии, с которыми я работаю" data-en="Technologies I work with">Технологии, с которыми я работаю</h2>
-        <p data-ru="Backend на .NET, чистая архитектура и инфраструктура вокруг — от API до контейнеров." data-en="Backend on .NET, clean architecture and the infrastructure around it — from API to containers.">Backend на .NET, чистая архитектура и инфраструктура вокруг — от API до контейнеров.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <div class="skill-group-title" data-ru="BACKEND" data-en="BACKEND">BACKEND</div>
-          <div class="tag-row">
-            <span class="tag">C#</span><span class="tag">ASP.NET Core</span><span class="tag">Async/Await</span>
-            <span class="tag">REST API</span>
-            <span class="tag">Entity Framework Core</span><span class="tag">Python</span><span class="tag">FastAPI</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="skill-group-title" data-ru="АРХИТЕКТУРА" data-en="ARCHITECTURE">АРХИТЕКТУРА</div>
-          <div class="tag-row">
-            <span class="tag">Clean Architecture</span><span class="tag">CQRS</span><span class="tag">MediatR</span>
-            <span class="tag">SOLID</span><span class="tag">DI</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="skill-group-title" data-ru="ИНФРАСТРУКТУРА" data-en="INFRASTRUCTURE">ИНФРАСТРУКТУРА</div>
-          <div class="tag-row">
-            <span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Kubernetes</span>
-            <span class="tag">Apache Kafka</span><span class="tag">Redis</span><span class="tag">Linux</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="skill-group-title" data-ru="ДАННЫЕ" data-en="DATA">ДАННЫЕ</div>
-          <div class="tag-row">
-            <span class="tag">PostgreSQL</span><span class="tag">SQL Server</span><span class="tag">LINQ</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="skill-group-title" data-ru="БЕЗОПАСНОСТЬ" data-en="SECURITY">БЕЗОПАСНОСТЬ</div>
-          <div class="tag-row">
-            <span class="tag">JWT</span><span class="tag">RBAC</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="skill-group-title" data-ru="ИНСТРУМЕНТЫ" data-en="TOOLS">ИНСТРУМЕНТЫ</div>
-          <div class="tag-row">
-            <span class="tag">Git</span><span class="tag">Swagger / OpenAPI</span>
-            <span class="tag">Rider</span><span class="tag">VS Code</span>
-            <span class="tag">CodeX</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="reveal">
-    <div class="container">
-      <div class="cta-band">
-        <div>
-          <h2 data-ru="Ищете .NET-разработчика в команду?" data-en="Looking for a .NET developer?">Ищете .NET-разработчика в команду?</h2>
-          <p data-ru="Открыт к удалённой работе, гибриду и офису — расскажите о задаче, обсудим детали." data-en="Open to remote, hybrid or on-site — tell me about the role and let's talk details.">Открыт к удалённой работе, гибриду и офису — расскажите о задаче, обсудим детали.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="mailto:thankr3@gmail.com">
-            <span data-ru="Написать на почту" data-en="Email me">Написать на почту</span>
-          </a>
-          <a class="btn btn-ghost" href="contacts.html" data-nav>
-            <span data-ru="Все контакты" data-en="All contacts">Все контакты</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2026 Roman Slinkov</p>
-    <div class="footer-links">
-      <a href="mailto:thankr3@gmail.com">Email</a>
-      <a href="https://t.me/m_a_r_k_l_d" target="_blank" rel="noopener">Telegram</a>
-      <a href="https://github.com/markld-ui" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070b14" />
+    <meta name="description" content="Роман Слиньков — .NET Backend Developer. ASP.NET Core, Clean Architecture, CQRS и REST API." />
+    <meta name="author" content="Роман Слиньков" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://protfolio-slinkov-roman.ru/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Роман Слиньков — Portfolio" />
+    <meta property="og:title" content="Роман Слиньков — .NET Backend Developer" />
+    <meta property="og:description" content="Backend на ASP.NET Core: Clean Architecture, CQRS, FSM и REST API." />
+    <meta property="og:url" content="https://protfolio-slinkov-roman.ru/" />
+    <meta property="og:image" content="https://protfolio-slinkov-roman.ru/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Роман Слиньков — .NET Backend Developer" />
+    <meta name="twitter:description" content="Backend на ASP.NET Core: Clean Architecture, CQRS, FSM и REST API." />
+    <meta name="twitter:image" content="https://protfolio-slinkov-roman.ru/og.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Роман Слиньков — .NET Backend Developer</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Роман Слиньков",
+        "jobTitle": ".NET Backend Developer",
+        "url": "https://protfolio-slinkov-roman.ru/",
+        "email": "mailto:thankr3@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Томск", "addressCountry": "RU" },
+        "sameAs": ["https://github.com/markld-ui", "https://t.me/m_a_r_k_l_d"],
+        "knowsAbout": ["C#", "ASP.NET Core", "Clean Architecture", "CQRS", "PostgreSQL", "Docker"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

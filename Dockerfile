@@ -1,9 +1,26 @@
-FROM nginx:1.27-alpine
+FROM node:22-alpine AS frontend
+WORKDIR /src
+COPY package*.json ./
+RUN npm ci
+COPY index.html vite.config.js ./
+COPY src ./src
+COPY scripts ./scripts
+COPY public ./public
+COPY assets/roman.jpg ./public/assets/roman.jpg
+RUN npm test
+RUN npm run build
 
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY *.html /usr/share/nginx/html/
-COPY assets/ /usr/share/nginx/html/assets/
+FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS backend
+WORKDIR /src
+COPY Portfolio.Api/Portfolio.Api.csproj Portfolio.Api/
+RUN dotnet restore Portfolio.Api/Portfolio.Api.csproj
+COPY Portfolio.Api/ Portfolio.Api/
+RUN dotnet publish Portfolio.Api/Portfolio.Api.csproj -c Release -o /app --no-restore
 
-EXPOSE 80 443
-
-CMD ["nginx", "-g", "daemon off;"]
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine
+WORKDIR /app
+COPY --from=backend /app .
+COPY --from=frontend /src/dist ./wwwroot
+ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "Portfolio.Api.dll"]

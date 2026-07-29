@@ -1,2 +1,10 @@
 .DS_Store
-/idea/
+.idea/
+.env
+.env.*
+!.env.example
+/certs/
+node_modules/
+dist/
+Portfolio.Api/bin/
+Portfolio.Api/obj/
