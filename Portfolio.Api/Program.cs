@@ -23,8 +23,5 @@ app.MapMethods(
     "/api/{**path}",
     ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
     () => Results.NotFound());
-app.UseDefaultFiles();
-app.UseStaticFiles();
-app.MapFallbackToFile("index.html");
 
 app.Run();

@@ -25,7 +25,8 @@ Open `http://localhost:5173`.
 docker compose -f docker-compose.local.yml up --build
 ```
 
-The application will be available at `http://localhost:8080`.
+The application will be available at `http://localhost:8080`. Nginx serves the
+pre-compressed React build; ASP.NET Core handles API routes only.
 
 ## Hosting
 
